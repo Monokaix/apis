@@ -21,14 +21,14 @@ import (
 	"context"
 	time "time"
 
+	topologyv1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/topology/v1alpha1"
+	versioned "github.com/Monokaix/apis/v2/pkg/client/clientset/versioned"
+	internalinterfaces "github.com/Monokaix/apis/v2/pkg/client/informers/externalversions/internalinterfaces"
+	v1alpha1 "github.com/Monokaix/apis/v2/pkg/client/listers/topology/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
-	topologyv1alpha1 "volcano.sh/apis/pkg/apis/topology/v1alpha1"
-	versioned "volcano.sh/apis/pkg/client/clientset/versioned"
-	internalinterfaces "volcano.sh/apis/pkg/client/informers/externalversions/internalinterfaces"
-	v1alpha1 "volcano.sh/apis/pkg/client/listers/topology/v1alpha1"
 )
 
 // HyperNodeInformer provides access to a shared informer and lister for

@@ -18,10 +18,10 @@ limitations under the License.
 package v1alpha1
 
 import (
+	v1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/bus/v1alpha1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/client-go/listers"
 	"k8s.io/client-go/tools/cache"
-	v1alpha1 "volcano.sh/apis/pkg/apis/bus/v1alpha1"
 )
 
 // CommandLister helps list Commands.

@@ -20,13 +20,13 @@ package v1alpha1
 import (
 	"context"
 
+	v1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/bus/v1alpha1"
+	busv1alpha1 "github.com/Monokaix/apis/v2/pkg/client/applyconfiguration/bus/v1alpha1"
+	scheme "github.com/Monokaix/apis/v2/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	gentype "k8s.io/client-go/gentype"
-	v1alpha1 "volcano.sh/apis/pkg/apis/bus/v1alpha1"
-	busv1alpha1 "volcano.sh/apis/pkg/client/applyconfiguration/bus/v1alpha1"
-	scheme "volcano.sh/apis/pkg/client/clientset/versioned/scheme"
 )
 
 // CommandsGetter has a method to return a CommandInterface.

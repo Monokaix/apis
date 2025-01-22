@@ -20,9 +20,9 @@ package v1alpha1
 import (
 	"net/http"
 
+	v1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/topology/v1alpha1"
+	"github.com/Monokaix/apis/v2/pkg/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
-	v1alpha1 "volcano.sh/apis/pkg/apis/topology/v1alpha1"
-	"volcano.sh/apis/pkg/client/clientset/versioned/scheme"
 )
 
 type TopologyV1alpha1Interface interface {

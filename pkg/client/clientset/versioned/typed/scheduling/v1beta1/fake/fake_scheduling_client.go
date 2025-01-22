@@ -18,9 +18,9 @@ limitations under the License.
 package fake
 
 import (
+	v1beta1 "github.com/Monokaix/apis/v2/pkg/client/clientset/versioned/typed/scheduling/v1beta1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
-	v1beta1 "volcano.sh/apis/pkg/client/clientset/versioned/typed/scheduling/v1beta1"
 )
 
 type FakeSchedulingV1beta1 struct {

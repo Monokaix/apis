@@ -18,8 +18,8 @@ limitations under the License.
 package v1alpha1
 
 import (
+	v1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/bus/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	v1alpha1 "volcano.sh/apis/pkg/apis/bus/v1alpha1"
 )
 
 // LifecyclePolicyApplyConfiguration represents a declarative configuration of the LifecyclePolicy type for use

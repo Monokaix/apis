@@ -22,13 +22,13 @@ import (
 	json "encoding/json"
 	"fmt"
 
+	v1beta1 "github.com/Monokaix/apis/v2/pkg/apis/scheduling/v1beta1"
+	schedulingv1beta1 "github.com/Monokaix/apis/v2/pkg/client/applyconfiguration/scheduling/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	testing "k8s.io/client-go/testing"
-	v1beta1 "volcano.sh/apis/pkg/apis/scheduling/v1beta1"
-	schedulingv1beta1 "volcano.sh/apis/pkg/client/applyconfiguration/scheduling/v1beta1"
 )
 
 // FakeQueues implements QueueInterface

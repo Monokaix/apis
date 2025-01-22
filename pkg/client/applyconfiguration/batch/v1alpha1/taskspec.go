@@ -18,8 +18,8 @@ limitations under the License.
 package v1alpha1
 
 import (
+	batchv1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/batch/v1alpha1"
 	v1 "k8s.io/api/core/v1"
-	batchv1alpha1 "volcano.sh/apis/pkg/apis/batch/v1alpha1"
 )
 
 // TaskSpecApplyConfiguration represents a declarative configuration of the TaskSpec type for use

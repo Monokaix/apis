@@ -21,14 +21,14 @@ import (
 	"context"
 	time "time"
 
+	schedulingv1beta1 "github.com/Monokaix/apis/v2/pkg/apis/scheduling/v1beta1"
+	versioned "github.com/Monokaix/apis/v2/pkg/client/clientset/versioned"
+	internalinterfaces "github.com/Monokaix/apis/v2/pkg/client/informers/externalversions/internalinterfaces"
+	v1beta1 "github.com/Monokaix/apis/v2/pkg/client/listers/scheduling/v1beta1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
-	schedulingv1beta1 "volcano.sh/apis/pkg/apis/scheduling/v1beta1"
-	versioned "volcano.sh/apis/pkg/client/clientset/versioned"
-	internalinterfaces "volcano.sh/apis/pkg/client/informers/externalversions/internalinterfaces"
-	v1beta1 "volcano.sh/apis/pkg/client/listers/scheduling/v1beta1"
 )
 
 // PodGroupInformer provides access to a shared informer and lister for

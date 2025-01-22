@@ -23,10 +23,10 @@ package v1beta1
 import (
 	unsafe "unsafe"
 
+	scheduling "github.com/Monokaix/apis/v2/pkg/apis/scheduling"
 	v1 "k8s.io/api/core/v1"
 	conversion "k8s.io/apimachinery/pkg/conversion"
 	runtime "k8s.io/apimachinery/pkg/runtime"
-	scheduling "volcano.sh/apis/pkg/apis/scheduling"
 )
 
 func init() {

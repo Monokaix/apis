@@ -18,8 +18,8 @@ limitations under the License.
 package v1alpha1
 
 import (
+	v1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/batch/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	v1alpha1 "volcano.sh/apis/pkg/apis/batch/v1alpha1"
 )
 
 // JobConditionApplyConfiguration represents a declarative configuration of the JobCondition type for use

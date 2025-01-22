@@ -24,7 +24,7 @@ SCRIPT_ROOT=$(dirname "${BASH_SOURCE[0]}")/..
 
 source "${SCRIPT_ROOT}/hack/kube_codegen.sh"
 
-THIS_PKG="volcano.sh/apis"
+THIS_PKG="github.com/Monokaix/apis/v2"
 
 kube::codegen::gen_helpers \
     --boilerplate "${SCRIPT_ROOT}/hack/boilerplate.go.txt" \

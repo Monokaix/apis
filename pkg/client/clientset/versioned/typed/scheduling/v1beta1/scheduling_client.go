@@ -20,9 +20,9 @@ package v1beta1
 import (
 	"net/http"
 
+	v1beta1 "github.com/Monokaix/apis/v2/pkg/apis/scheduling/v1beta1"
+	"github.com/Monokaix/apis/v2/pkg/client/clientset/versioned/scheme"
 	rest "k8s.io/client-go/rest"
-	v1beta1 "volcano.sh/apis/pkg/apis/scheduling/v1beta1"
-	"volcano.sh/apis/pkg/client/clientset/versioned/scheme"
 )
 
 type SchedulingV1beta1Interface interface {

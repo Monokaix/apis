@@ -18,8 +18,8 @@ limitations under the License.
 package v1beta1
 
 import (
+	v1beta1 "github.com/Monokaix/apis/v2/pkg/apis/scheduling/v1beta1"
 	v1 "k8s.io/api/core/v1"
-	v1beta1 "volcano.sh/apis/pkg/apis/scheduling/v1beta1"
 )
 
 // QueueStatusApplyConfiguration represents a declarative configuration of the QueueStatus type for use

@@ -22,13 +22,13 @@ import (
 	json "encoding/json"
 	"fmt"
 
+	v1alpha1 "github.com/Monokaix/apis/v2/pkg/apis/batch/v1alpha1"
+	batchv1alpha1 "github.com/Monokaix/apis/v2/pkg/client/applyconfiguration/batch/v1alpha1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	testing "k8s.io/client-go/testing"
-	v1alpha1 "volcano.sh/apis/pkg/apis/batch/v1alpha1"
-	batchv1alpha1 "volcano.sh/apis/pkg/client/applyconfiguration/batch/v1alpha1"
 )
 
 // FakeJobs implements JobInterface

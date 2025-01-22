@@ -20,13 +20,13 @@ package v1beta1
 import (
 	"context"
 
+	v1beta1 "github.com/Monokaix/apis/v2/pkg/apis/scheduling/v1beta1"
+	schedulingv1beta1 "github.com/Monokaix/apis/v2/pkg/client/applyconfiguration/scheduling/v1beta1"
+	scheme "github.com/Monokaix/apis/v2/pkg/client/clientset/versioned/scheme"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	gentype "k8s.io/client-go/gentype"
-	v1beta1 "volcano.sh/apis/pkg/apis/scheduling/v1beta1"
-	schedulingv1beta1 "volcano.sh/apis/pkg/client/applyconfiguration/scheduling/v1beta1"
-	scheme "volcano.sh/apis/pkg/client/clientset/versioned/scheme"
 )
 
 // QueuesGetter has a method to return a QueueInterface.

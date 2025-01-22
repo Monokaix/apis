@@ -1,4 +1,4 @@
-module volcano.sh/apis
+module github.com/Monokaix/apis/v2
 
 go 1.22.0
 

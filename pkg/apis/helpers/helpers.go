@@ -38,10 +38,10 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/klog/v2"
 
-	vcbatch "volcano.sh/apis/pkg/apis/batch/v1alpha1"
-	vcbus "volcano.sh/apis/pkg/apis/bus/v1alpha1"
-	flow "volcano.sh/apis/pkg/apis/flow/v1alpha1"
-	schedulerv1beta1 "volcano.sh/apis/pkg/apis/scheduling/v1beta1"
+	vcbatch "github.com/Monokaix/apis/v2/pkg/apis/batch/v1alpha1"
+	vcbus "github.com/Monokaix/apis/v2/pkg/apis/bus/v1alpha1"
+	flow "github.com/Monokaix/apis/v2/pkg/apis/flow/v1alpha1"
+	schedulerv1beta1 "github.com/Monokaix/apis/v2/pkg/apis/scheduling/v1beta1"
 )
 
 // JobKind creates job GroupVersionKind.
