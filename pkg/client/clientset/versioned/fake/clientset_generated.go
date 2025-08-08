@@ -27,6 +27,8 @@ import (
 	clientset "volcano.sh/apis/pkg/client/clientset/versioned"
 	batchv1alpha1 "volcano.sh/apis/pkg/client/clientset/versioned/typed/batch/v1alpha1"
 	fakebatchv1alpha1 "volcano.sh/apis/pkg/client/clientset/versioned/typed/batch/v1alpha1/fake"
+	batchv1alpha2 "volcano.sh/apis/pkg/client/clientset/versioned/typed/batch/v1alpha2"
+	fakebatchv1alpha2 "volcano.sh/apis/pkg/client/clientset/versioned/typed/batch/v1alpha2/fake"
 	busv1alpha1 "volcano.sh/apis/pkg/client/clientset/versioned/typed/bus/v1alpha1"
 	fakebusv1alpha1 "volcano.sh/apis/pkg/client/clientset/versioned/typed/bus/v1alpha1/fake"
 	flowv1alpha1 "volcano.sh/apis/pkg/client/clientset/versioned/typed/flow/v1alpha1"
@@ -128,6 +130,11 @@ var (
 // BatchV1alpha1 retrieves the BatchV1alpha1Client
 func (c *Clientset) BatchV1alpha1() batchv1alpha1.BatchV1alpha1Interface {
 	return &fakebatchv1alpha1.FakeBatchV1alpha1{Fake: &c.Fake}
+}
+
+// BatchV1alpha2 retrieves the BatchV1alpha2Client
+func (c *Clientset) BatchV1alpha2() batchv1alpha2.BatchV1alpha2Interface {
+	return &fakebatchv1alpha2.FakeBatchV1alpha2{Fake: &c.Fake}
 }
 
 // BusV1alpha1 retrieves the BusV1alpha1Client

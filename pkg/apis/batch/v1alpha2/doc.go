@@ -1,5 +1,5 @@
 /*
-Copyright 2024 The Volcano Authors.
+Copyright 2025 The Volcano Authors.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -16,9 +16,6 @@ limitations under the License.
 
 // +k8s:deepcopy-gen=package
 // +groupName=batch.volcano.sh
-// +k8s:defaulter-gen=TypeMeta
 
-// Package v1alpha1 is the v1alpha1 version of the API.
-// +k8s:openapi-gen=true
-// +k8s:defaulter-gen=true
-package v1alpha1
+// Package v1alpha2 is the v1alpha2 version of the API.
+package v1alpha2

@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package v1alpha1
+package v1alpha2
 
 import (
 	v1 "k8s.io/api/core/v1"
@@ -27,7 +27,6 @@ import (
 // +kubebuilder:object:root=true
 // +kubebuilder:resource:path=jobs,shortName=vcjob;vj
 // +kubebuilder:subresource:status
-// +kubebuilder:storageversion
 
 // Job defines the volcano job.
 // +kubebuilder:printcolumn:name="STATUS",type=string,JSONPath=`.status.state.phase`
@@ -67,7 +66,7 @@ type JobSpec struct {
 
 	// Tasks specifies the task specification of Job
 	// +optional
-	Tasks []TaskSpec `json:"tasks,omitempty" protobuf:"bytes,4,opt,name=tasks"`
+	Tasks []TaskSpecWithSize `json:"tasks,omitempty" protobuf:"bytes,4,opt,name=tasks"`
 
 	// Specifies the default lifecycle of tasks
 	// +optional
@@ -251,6 +250,16 @@ type TaskSpec struct {
 	// Specifies the tasks that this task depends on.
 	// +optional
 	DependsOn *DependsOn `json:"dependsOn,omitempty" protobuf:"bytes,8,opt,name=dependsOn"`
+}
+
+// TaskSpecWithSize specifies the task specification of Job with size.
+type TaskSpecWithSize struct {
+	// The size of the task.
+	// +optional
+	Size int `json:"size,omitempty" protobuf:"varint,1,opt,name=size"`
+
+	// The task specification.
+	TaskSpec TaskSpec `json:"taskSpec,omitempty" protobuf:"bytes,2,opt,name=taskSpec"`
 }
 
 // JobPhase defines the phase of the job.

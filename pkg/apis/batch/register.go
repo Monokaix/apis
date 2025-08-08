@@ -14,11 +14,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-// +k8s:deepcopy-gen=package
-// +groupName=batch.volcano.sh
-// +k8s:defaulter-gen=TypeMeta
+package batch
 
-// Package v1alpha1 is the v1alpha1 version of the API.
-// +k8s:openapi-gen=true
-// +k8s:defaulter-gen=true
-package v1alpha1
+const (
+	// GroupName is the group name used in this package.
+	GroupName = "batch.volcano.sh"
+)

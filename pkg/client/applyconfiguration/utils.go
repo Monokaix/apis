@@ -22,12 +22,14 @@ import (
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	testing "k8s.io/client-go/testing"
 	v1alpha1 "volcano.sh/apis/pkg/apis/batch/v1alpha1"
+	v1alpha2 "volcano.sh/apis/pkg/apis/batch/v1alpha2"
 	busv1alpha1 "volcano.sh/apis/pkg/apis/bus/v1alpha1"
 	flowv1alpha1 "volcano.sh/apis/pkg/apis/flow/v1alpha1"
 	nodeinfov1alpha1 "volcano.sh/apis/pkg/apis/nodeinfo/v1alpha1"
 	v1beta1 "volcano.sh/apis/pkg/apis/scheduling/v1beta1"
 	topologyv1alpha1 "volcano.sh/apis/pkg/apis/topology/v1alpha1"
 	batchv1alpha1 "volcano.sh/apis/pkg/client/applyconfiguration/batch/v1alpha1"
+	batchv1alpha2 "volcano.sh/apis/pkg/client/applyconfiguration/batch/v1alpha2"
 	applyconfigurationbusv1alpha1 "volcano.sh/apis/pkg/client/applyconfiguration/bus/v1alpha1"
 	applyconfigurationflowv1alpha1 "volcano.sh/apis/pkg/client/applyconfiguration/flow/v1alpha1"
 	internal "volcano.sh/apis/pkg/client/applyconfiguration/internal"
@@ -63,6 +65,32 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &batchv1alpha1.TaskStateApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("VolumeSpec"):
 		return &batchv1alpha1.VolumeSpecApplyConfiguration{}
+
+		// Group=batch.volcano.sh, Version=v1alpha2
+	case v1alpha2.SchemeGroupVersion.WithKind("DependsOn"):
+		return &batchv1alpha2.DependsOnApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("Job"):
+		return &batchv1alpha2.JobApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("JobCondition"):
+		return &batchv1alpha2.JobConditionApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("JobSpec"):
+		return &batchv1alpha2.JobSpecApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("JobState"):
+		return &batchv1alpha2.JobStateApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("JobStatus"):
+		return &batchv1alpha2.JobStatusApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("LifecyclePolicy"):
+		return &batchv1alpha2.LifecyclePolicyApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("NetworkTopologySpec"):
+		return &batchv1alpha2.NetworkTopologySpecApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("TaskSpec"):
+		return &batchv1alpha2.TaskSpecApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("TaskSpecWithSize"):
+		return &batchv1alpha2.TaskSpecWithSizeApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("TaskState"):
+		return &batchv1alpha2.TaskStateApplyConfiguration{}
+	case v1alpha2.SchemeGroupVersion.WithKind("VolumeSpec"):
+		return &batchv1alpha2.VolumeSpecApplyConfiguration{}
 
 		// Group=bus.volcano.sh, Version=v1alpha1
 	case busv1alpha1.SchemeGroupVersion.WithKind("Command"):

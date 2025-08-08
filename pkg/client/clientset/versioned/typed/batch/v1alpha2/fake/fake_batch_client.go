@@ -20,20 +20,20 @@ package fake
 import (
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
-	v1alpha1 "volcano.sh/apis/pkg/client/clientset/versioned/typed/topology/v1alpha1"
+	v1alpha2 "volcano.sh/apis/pkg/client/clientset/versioned/typed/batch/v1alpha2"
 )
 
-type FakeTopologyV1alpha1 struct {
+type FakeBatchV1alpha2 struct {
 	*testing.Fake
 }
 
-func (c *FakeTopologyV1alpha1) HyperNodes() v1alpha1.HyperNodeInterface {
-	return newFakeHyperNodes(c)
+func (c *FakeBatchV1alpha2) Jobs(namespace string) v1alpha2.JobInterface {
+	return newFakeJobs(c, namespace)
 }
 
 // RESTClient returns a RESTClient that is used to communicate
 // with API server by this client implementation.
-func (c *FakeTopologyV1alpha1) RESTClient() rest.Interface {
+func (c *FakeBatchV1alpha2) RESTClient() rest.Interface {
 	var ret *rest.RESTClient
 	return ret
 }
